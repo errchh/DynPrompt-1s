@@ -12,7 +12,7 @@ Dynamic Prompt Assistant - Single Agent with Streamlit UI
 
 ## About the Project
 
-Pycon Hong Kong 2024 sprint day project. 
+Pycon Hong Kong 2024 Sprint project. 
 
 It is a tool for automating repetitive tasks -- minimising time spend on non-value adding processes, increasing work efficiency. 
 
