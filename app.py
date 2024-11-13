@@ -7,7 +7,7 @@ script_dir = os.path.dirname(__file__)
 os.chdir(script_dir)
 
 # Ollama model, error handling 
-model = 'llama3.1:latest'
+model = 'llama3.2-vision:11b'
 
 try:
     ollama.chat(model)
@@ -49,7 +49,7 @@ responses = []  # Create an empty list to store the responses
 
 # Loop variable through LLM 
 for item in prompt_var_list:
-    response = ollama.chat(model='llama3.1', messages=[
+    response = ollama.chat(model=model, messages=[
         {
             'role': 'user',
             'content': f"""

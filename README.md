@@ -30,7 +30,7 @@ In Terminal:
 
 ```
 pip install ollama 
-ollama pull llama3.1:latest 
+ollama pull llama3.2-vision:11b
 ```
 
 ```
@@ -94,10 +94,10 @@ Prompt engineering techniques can be refined with resources mentioned above.
 
 What LLM model could be used depends on your hardware. The better the LLM model, the higher RAM and VRAM requirements. 
 
-In this script in particular, I am using ``Llama 3.1 8B`` on MacBook M3 Pro ``18GB RAM``. You may run into errors if your VRAM is insufficient. 
+In this script in particular, I am using ``llama3.2-vision:11b`` on MacBook M3 Pro ``18GB RAM``. You may run into errors if your VRAM is insufficient. 
 
 Check in terminal to see if Ollama is running correctly. Or edit the script for a smaller LLM accordingly. 
 
 ```
-ollama run llama3.1:latest
+ollama run llama3.2-vision:11b
 ```
