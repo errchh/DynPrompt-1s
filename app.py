@@ -7,7 +7,7 @@ script_dir = os.path.dirname(__file__)
 os.chdir(script_dir)
 
 # Ollama model, error handling 
-model = 'llama3.2-vision:11b'
+model = 'llama3.2:3b'
 
 try:
     ollama.chat(model)
