@@ -12,9 +12,9 @@ Dynamic Prompt Assistant - Single Agent with Streamlit UI
 
 ## About the Project
 
-Pycon Hong Kong 2024 Sprint project. 
+PyCon Hong Kong 2024 Sprint project. 
 
-It is a tool for automating repetitive tasks -- minimising time spend on non-value adding processes, increasing work efficiency. 
+This Python app utilises gen AI for repetitive, similar tasks. This allows users to input task details into a CSV format, efficiently delegating these responsibilities to a locally hosted large language model powered by Ollama. The system then generates responses and returns them in a readily usable CSV format.
 
 ## Technical Details
 
