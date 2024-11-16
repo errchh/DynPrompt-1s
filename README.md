@@ -1,4 +1,4 @@
-![image description](image/logo.png)
+![image description](static/logo.png)
 
 # DynPrompt-1s
 
