@@ -2,6 +2,8 @@ import os
 import ollama
 import pandas as pd 
 
+#def (prompt: str, file:)
+
 # Set pwd same as app.py 
 script_dir = os.path.dirname(__file__)
 os.chdir(script_dir)
