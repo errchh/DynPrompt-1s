@@ -1,8 +1,10 @@
-![image description](static/logo.png)
+![DynPrompt-1s logo](static/logo.png)
 
 # DynPrompt-1s
 
 Dynamic Prompt Assistant - Single Agent with Streamlit UI 
+
+![with Streamlit web UI](static/dynp-st.png)
 
 ## Key Features
 
