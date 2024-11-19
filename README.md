@@ -36,7 +36,7 @@ ollama pull llama3.2:3b
 ```
 
 ```
-pip install pandas 
+pip install pandas streamlit 
 ```
 
 ### Prep data.csv
