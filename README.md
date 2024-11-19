@@ -31,12 +31,8 @@ Download and install Ollama from ``https://ollama.com/download``
 In Terminal: 
 
 ```
-pip install ollama 
+pip install -r requirements.txt
 ollama pull llama3.2:3b
-```
-
-```
-pip install pandas streamlit 
 ```
 
 ### Prep data.csv
