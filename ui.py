@@ -13,7 +13,7 @@ if 'inputfile' not in st.session_state:
 
 
 # display the logo
-render_image('static/logo.png')
+render_image('static/logo-small.png')
 
 # display the title for the application
 st.text("DynPrompt-1s: your free tool for automating repetitive tasks with generative AI",)
