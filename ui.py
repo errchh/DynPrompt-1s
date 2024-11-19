@@ -21,7 +21,7 @@ st.text("DynPrompt-1s: your free tool for automating repetitive tasks with gener
 # display the drop
 option = st.selectbox(
     "Which model you would like to use?",
-    ("llama3.2:3b"),
+    ('llama3.2:3b'),
 )
 st.write("You selected:", option)
 
@@ -49,8 +49,6 @@ if st.button('Preview CSV File'):
 
 if st.button('Upload CSV File and Run the Script'):
    with st.spinner('Loading...'):
-
-
         #def (prompt: str, file:)
 
         """
@@ -64,14 +62,14 @@ if st.button('Upload CSV File and Run the Script'):
 
         try:
             ollama.chat(model)
+            st.write('call the LLM')
         except ollama.ResponseError as e:
-            print('Error:', e.error)
+            st.write('cannot call the LLM')
             if e.status_code == 404:
                 ollama.pull(model)
 
         # Read the CSV, error handling 
-        
-
+    
         try:
             df = pd.read_csv(uploaded_file)
         except FileNotFoundError:
@@ -94,6 +92,7 @@ if st.button('Upload CSV File and Run the Script'):
         # Base prompt
         prompt = x
 
+
         responses = []  # Create an empty list to store the responses
 
         # Loop variable through LLM 
@@ -108,16 +107,27 @@ if st.button('Upload CSV File and Run the Script'):
                 },
             ])
             responses.append(response['message']['content'])  # Append the response to the list
-            #print(response['message']['content'])
+            print(response['message']['content'])
+            
+        # Save responses list as csv
+        print(responses)
+        if responses:
+            df_responses = pd.DataFrame(responses, columns=['responses'])  # Convert list to DataFrame
+            st.session_state.dataframe = df_responses 
+            st.write(st.session_state.dataframe)
+            csv = df_responses.to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label = 'Download data as CSV',
+                data = csv,
+                file_name = 'response.csv',
+                mime ='text/csv')    
+        else:
+            st.write("the responses is empty")
+        #time.sleep(5) # Call the long-running function
 
 
-        # Save responses list as csv 
-        responses = pd.DataFrame(responses, columns=['responses'])  # Convert list to DataFrame
-        responses.to_csv('responses.csv', index=False)
-
-
-        time.sleep(5) # Call the long-running function
-
-
+'''
 if st.button("Download output csv file"):
     st.write(st.session_state.dataframe)
+    csv = st.session_state.dataframe
+'''

@@ -20,7 +20,7 @@ This Python app utilises gen AI for repetitive, similar tasks. This allows users
 
 - Python version: 3.11
 - Libraries used: ollama-python
-- Dependencies required: pandas 
+- Dependencies required: pandas, streamlit 
 
 ## Installation and Usage
 
@@ -79,7 +79,7 @@ Example use cases:
 
 ```
 cd DynPrompt-1s
-python app.py
+streamlit run ui.py 
 ```
 
 ### Results in responses.csv 
