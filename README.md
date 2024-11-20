@@ -8,7 +8,7 @@ Dynamic Prompt Assistant - Single Agent with Streamlit UI
 
 ## Key Features
 
-``Automate repetitive tasks using gen AI.``
+``Your free tool for completing repetitive tasks with generative AI``
 
 ``$0 subscription fee. 100% data privacy.``
 
@@ -25,6 +25,20 @@ This Python app utilises gen AI for repetitive, similar tasks. This allows users
 - Dependencies required: pandas, streamlit 
 
 ## Installation and Usage
+
+```
+How to Use the Tool:
+
+1. Prepare Your Data: Ensure your data is in a single-column CSV format. Reformat your data as needed to meet this requirement by following the guidelines.
+
+2. Upload Your File: Click the Upload button to upload your formatted file. A preview of a portion of your data will be displayed for review.
+
+3. Enter Your Command: In the Prompt Command text field, specify the task you want the tool to perform with the uploaded data (e.g., analyze, manipulate).
+
+4. Run the Task: Click the Run button to execute the task.
+
+5. Download Results: Once the task is completed, click the Download button to download the results as a CSV file.
+```
 
 Download and install Ollama from ``https://ollama.com/download`` 
 
@@ -43,7 +57,7 @@ Paste each of them in the ``prompt_var`` column in separate rows.
 
 ### Set your prompt 
 
-Edit your prompt under ``Base prompt`` section in ``app.py``. Use prompt engineering techniques for desired results. 
+Edit your prompt under ``Base prompt`` section in ``ui.py``. Use prompt engineering techniques for desired results. 
 
 Example use cases: 
 
@@ -73,7 +87,7 @@ Example use cases:
         """
     ```
 
-### Run app.py
+### Run ui.py
 
 ```
 cd DynPrompt-1s
