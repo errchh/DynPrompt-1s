@@ -1,11 +1,8 @@
 import streamlit as st
 import pandas as pd
-import time
-import os
 import ollama
-import pandas as pd 
 
-from ui_helper import render_image, file_selector
+from ui_helper import render_image
 
 # Initialize session state for storing the DataFrame
 if 'inputfile' not in st.session_state:
@@ -123,11 +120,3 @@ if st.button('Upload CSV File and Run the Script'):
                 mime ='text/csv')    
         else:
             st.write("the responses is empty")
-        #time.sleep(5) # Call the long-running function
-
-
-'''
-if st.button("Download output csv file"):
-    st.write(st.session_state.dataframe)
-    csv = st.session_state.dataframe
-'''
