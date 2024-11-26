@@ -12,12 +12,3 @@ def render_image(filepath: str):
     content_b64encoded = base64.b64encode(content_bytes).decode()
     image_string = f'data:image/{mime_type};base64,{content_b64encoded}'
     st.image(image_string)
-
-
-def file_selector(folder_path='.'):
-    # List all files in the specified folder
-    filenames = os.listdir(folder_path)
-    # Create a selectbox for file selection
-    selected_filename = st.selectbox('Select a file', filenames)
-    # Return the full path of the selected file
-    return os.path.join(folder_path, selected_filename)
