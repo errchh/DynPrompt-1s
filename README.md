@@ -91,7 +91,7 @@ Example use cases:
 
 ```
 cd DynPrompt-1s
-streamlit run ui.py 
+streamlit run ui.py llama3.2:3b
 ```
 
 ### Docker Image Build & Run Container
