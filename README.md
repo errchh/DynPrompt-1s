@@ -94,6 +94,12 @@ cd DynPrompt-1s
 streamlit run ui.py 
 ```
 
+### Docker Image Build & Run Container
+```
+docker build -t streamlit-app .
+docker run -it --name streamlit-app -p 8501:8501 -p 11434:11434 streamlit-app
+```
+
 ### Results in responses.csv 
 
 ``responses.csv`` is saved in the same folder. Open in Excel. 
