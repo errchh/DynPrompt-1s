@@ -1,8 +1,12 @@
 import streamlit as st
 import pandas as pd
 import ollama
+import sys
 
 from ui_helper import render_image
+
+if len(sys.argv) != 2:
+    sys.exit()
 
 # Initialize session state for storing the DataFrame
 if 'inputfile' not in st.session_state:
@@ -18,7 +22,7 @@ st.text("DynPrompt-1s: your free tool for automating repetitive tasks with gener
 # display the drop
 option = st.selectbox(
     "Which model you would like to use?",
-    ('llama3.2:3b'),
+    (sys.argv[1]),
 )
 st.write("You selected:", option)
 
